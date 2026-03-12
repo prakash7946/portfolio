@@ -255,16 +255,20 @@
 
             <div class="contact-form glassmorphism">
                 <h3>Send a Message</h3>
-                <form action="#">
+                <form action="https://formsubmit.co/prakashsiva2004429@gmail.com" method="POST">
+                    <!-- Security/Bot protection for FormSubmit -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New Message from Portfolio Website Form!">
+                    
                     <div class="input-box">
-                        <input type="text" placeholder="Full Name" required>
-                        <input type="email" placeholder="Email Address" required>
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
                     </div>
                     <div class="input-box">
-                        <input type="number" placeholder="Mobile Number" required>
-                        <input type="text" placeholder="Email Subject" required>
+                        <input type="number" name="phone" placeholder="Mobile Number" required>
+                        <input type="text" name="_subject_custom" placeholder="Email Subject" required>
                     </div>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
                     <input type="submit" value="Send Message" class="btn">
                 </form>
             </div>
