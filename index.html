@@ -33,7 +33,7 @@
             <h3>Hello, It's Me</h3>
             <h1>Sivaprakash S</h1>
             <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>I am a Computer Science Engineering student passionate about Machine Learning, software development, and
+            <p>I am a Computer Science Engineering student passionate about Machine Learning, Data Analysis, Digital Marketing, software development, and
                 solving real-world problems using data and technology.</p>
 
             <div class="social-media">
@@ -109,12 +109,15 @@
                 </div>
             </div>
 
-            <!-- Technologies -->
+            <!-- Technologies & Skills -->
             <div class="skills-category glassmorphism">
-                <h3>Technologies</h3>
+                <h3>Technologies & Skills</h3>
                 <div class="icon-grid">
                     <div class="skill-item"><i class='bx bxs-data'></i>
                         <p>MySQL</p>
+                    </div>
+                    <div class="skill-item"><i class='bx bxs-megaphone'></i>
+                        <p>Digital Marketing</p>
                     </div>
                 </div>
             </div>
@@ -138,6 +141,9 @@
                     <div class="skill-item"><i class='bx bxl-java'></i>
                         <p>Eclipse</p>
                     </div>
+                    <div class="skill-item"><i class='bx bx-spreadsheet'></i>
+                        <p>MS Excel</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -146,16 +152,27 @@
     <!-- Internship Section -->
     <section class="experience" id="experience">
         <h2 class="heading">Internship <span>Experience</span></h2>
+        
+        <div class="experience-container" style="display: grid; gap: 3rem; max-width: 80rem; margin: 0 auto;">
+            <div class="experience-card glassmorphism">
+                <h3>Internship Trainee</h3>
+                <h4>Voxlom Innovative Solution (OPC) Private Limited, Panagudi</h4>
+                <span class="duration"><i class='bx bx-calendar'></i> February 2026 (16 Days)</span>
+                <p>
+                    Completed a 16-day internship at Voxlom Innovative Solution. During the internship, I showed good punctuality, dedication, and commitment to assigned tasks. I actively participated in the work, completed assignments on time, and gained practical experience in a professional environment.
+                </p>
+            </div>
 
-        <div class="experience-card glassmorphism">
-            <h3>Machine Learning Intern</h3>
-            <h4>Malaris Software Solutions, Tirunelveli</h4>
-            <span class="duration"><i class='bx bx-calendar'></i> June 2025 – July 2025</span>
-            <p>
-                Worked on machine learning algorithms, data preprocessing, model training, and performance evaluation
-                using Python.<br>
-                Gained practical experience in supervised and unsupervised learning and real-world data problem solving.
-            </p>
+            <div class="experience-card glassmorphism">
+                <h3>Machine Learning Intern</h3>
+                <h4>Malaris Software Solutions, Tirunelveli</h4>
+                <span class="duration"><i class='bx bx-calendar'></i> June 2025 – July 2025</span>
+                <p>
+                    Worked on machine learning algorithms, data preprocessing, model training, and performance evaluation
+                    using Python.<br>
+                    Gained practical experience in supervised and unsupervised learning and real-world data problem solving.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -188,6 +205,12 @@
         <h2 class="heading">Certifications & <span>Workshops</span></h2>
 
         <div class="certifications-container">
+            <div class="cert-box glassmorphism">
+                <i class='bx bx-bot'></i>
+                <h3>Naan Mudhalvan Robotic Process Automation Foundation Course</h3>
+                <p>Issued by: UiPath<br>S. Sivaprakash – 15 November 2024</p>
+            </div>
+
             <div class="cert-box glassmorphism">
                 <i class='bx bx-certification'></i>
                 <h3>DevOps and ReactJS Workshop</h3>
@@ -262,6 +285,28 @@
             <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
+
+    <!-- Chat Bot Widget -->
+    <div class="chatbot-toggler" id="chatbot-toggler">
+        <i class='bx bx-message-rounded-dots'></i>
+    </div>
+    
+    <div class="chatbot-container glassmorphism" id="chatbot-container">
+        <header>
+            <h2>Chat with Me</h2>
+            <i class='bx bx-x' id="close-chatbot"></i>
+        </header>
+        <ul class="chatbox" id="chatbox">
+            <li class="chat incoming">
+                <i class='bx bx-bot'></i>
+                <p>Hi there 👋<br>How can I help you today?</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea id="chat-textarea" placeholder="Enter a message..." required></textarea>
+            <i class='bx bx-send' id="send-btn"></i>
+        </div>
+    </div>
 
     <!-- Typewriter Effect -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
