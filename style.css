@@ -649,7 +649,51 @@ section {
     }
 }
 
-/* Chatbot/* Puzzle Widget Styles */
+/* Chatbot Widget Styles */
+.chatbot-toggler {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    height: 6rem;
+    width: 6rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+body.show-chatbot .chatbot-toggler {
+    transform: rotate(90deg);
+}
+
+.chatbot-toggler i {
+    position: absolute;
+    font-size: 3rem;
+    transition: all 0.2s ease;
+}
+
+.chatbot-toggler i.bx-x {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+body.show-chatbot .chatbot-toggler i.bx-x {
+    opacity: 1;
+    transform: scale(1);
+}
+
+body.show-chatbot .chatbot-toggler i.bx-message-rounded-dots {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+/* Puzzle Widget Styles */
 .puzzle-container {
     position: fixed;
     left: 50%;
