@@ -649,45 +649,30 @@ section {
     }
 }
 
-/* Chatbot Widget Styles */
-.chatbot-toggler {
+/* Chatbot/* Puzzle Widget Styles */
+.puzzle-container {
     position: fixed;
-    bottom: 3rem;
-    right: 3rem;
-    outline: none;
-    border: none;
-    height: 6rem;
-    width: 6rem;
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--main-color);
-    transition: all 0.2s ease;
-    z-index: 1000;
-    box-shadow: 0 0 1rem rgba(56, 189, 248, 0.5);
+    left: 50%;
+    top: 50%;
+    width: 35rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.3s ease;
+    z-index: 10000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-body.show-chatbot .chatbot-toggler {
-    transform: rotate(90deg);
-}
-
-.chatbot-toggler i {
-    color: var(--bg-color);
-    font-size: 3rem;
-}
-
-body.show-chatbot .chatbot-toggler i.bx-message-rounded-dots {
-    display: none;
-}
-
-.chatbot-toggler i.bx-x {
-    display: none;
-}
-
-body.show-chatbot .chatbot-toggler i.bx-x {
-    display: block;
+body.show-puzzle .puzzle-container {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .chatbot-container {
