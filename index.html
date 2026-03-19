@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sivaprakash S - Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome / BoxIcons -->
@@ -15,134 +17,160 @@
 <body class="show-chatbot">
     <!-- Navbar -->
     <header class="header">
-        <a href="#" class="logo">Sivaprakash S.</a>
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="logo">Sivaprakash S.</a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Sivaprakash S</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>I am a Computer Science Engineering student passionate about Machine Learning, Data Analysis, Digital Marketing, software development, and
-                solving real-world problems using data and technology.</p>
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <div class="home-content">
+                        <h3>Hello, It's Me</h3>
+                        <h1>Sivaprakash S</h1>
+                        <h3>And I'm a <span class="multiple-text"></span></h3>
+                        <p>I am a Computer Science Engineering student passionate about Machine Learning, Data Analysis, Digital Marketing, software development, and
+                            solving real-world problems using data and technology.</p>
+            
+                        <div class="social-media">
+                            <a href="https://github.com/prakash7946" target="_blank" data-bs-toggle="tooltip" title="GitHub"><i class='bx bxl-github'></i></a>
+                            <a href="https://linkedin.com/in/s-sivaprakash-b9174829b" target="_blank" data-bs-toggle="tooltip" title="LinkedIn"><i
+                                    class='bx bxl-linkedin'></i></a>
+                        </div>
+            
+                        <div class="btn-group">
+                            <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
+                            <a href="#projects" class="btn">View Projects</a>
+                            <a href="#contact" class="btn">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="social-media">
-                <a href="https://github.com/prakash7946" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://linkedin.com/in/s-sivaprakash-b9174829b" target="_blank"><i
-                        class='bx bxl-linkedin'></i></a>
+                <div class="col-lg-5 order-1 order-lg-2 text-center">
+                    <div class="home-img mx-auto">
+                        <img src="assets/sivaprakash-profile-new.jpeg" class="img-fluid" alt="Sivaprakash S Portrait">
+                    </div>
+                </div>
             </div>
-
-            <div class="btn-group">
-                <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
-                <a href="#projects" class="btn">View Projects</a>
-                <a href="#contact" class="btn">Contact Me</a>
-            </div>
-        </div>
-
-        <div class="home-img">
-            <img src="assets/sivaprakash-profile-new.jpeg" alt="Sivaprakash S Portrait">
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <h2 class="heading">About <span>Me</span></h2>
+        <div class="container">
+            <h2 class="heading">About <span>Me</span></h2>
 
-        <div class="about-container">
-            <div class="about-card glassmorphism">
-                <h3>Personal Info</h3>
-                <p><strong>Name:</strong> Sivaprakash S</p>
-                <p><strong>Phone:</strong> +91 9344709406</p>
-                <p><strong>Email:</strong> <a
-                        href="mailto:prakashsiva2004429@gmail.com">prakashsiva2004429@gmail.com</a></p>
-            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="about-card glassmorphism h-100">
+                        <h3>Personal Info</h3>
+                        <p><strong>Name:</strong> Sivaprakash S</p>
+                        <p><strong>Phone:</strong> +91 9344709406</p>
+                        <p><strong>Email:</strong> <a
+                                href="mailto:prakashsiva2004429@gmail.com">prakashsiva2004429@gmail.com</a></p>
+                    </div>
+                </div>
 
-            <div class="about-card glassmorphism">
-                <h3>Education</h3>
-                <p><strong>B.E. Computer Science Engineering</strong></p>
-                <p>(2022 – Present)</p>
-                <p>Thamirabharani Engineering College, Tirunelveli</p>
-            </div>
+                <div class="col-md-4">
+                    <div class="about-card glassmorphism h-100">
+                        <h3>Education</h3>
+                        <p><strong>B.E. Computer Science Engineering</strong></p>
+                        <p>(2022 – Present)</p>
+                        <p>Thamirabharani Engineering College, Tirunelveli</p>
+                    </div>
+                </div>
 
-            <div class="about-card glassmorphism objective">
-                <h3>Objective</h3>
-                <p>To build a successful career in Software Development and Machine Learning by applying technical
-                    skills to create innovative and efficient solutions.</p>
+                <div class="col-md-4">
+                    <div class="about-card glassmorphism objective h-100">
+                        <h3>Objective</h3>
+                        <p>To build a successful career in Software Development and Machine Learning by applying technical
+                            skills to create innovative and efficient solutions.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="container">
+            <h2 class="heading">My <span>Skills</span></h2>
 
-        <div class="skills-grid">
-            <!-- Programming Languages -->
-            <div class="skills-category glassmorphism">
-                <h3>Programming Languages</h3>
-                <div class="icon-grid">
-                    <div class="skill-item"><i class='bx bxl-python'></i>
-                        <p>Python</p>
-                    </div>
-                    <div class="skill-item"><i class='bx bx-code-alt'></i>
-                        <p>C</p>
-                    </div>
-                    <div class="skill-item"><i class='bx bxl-javascript'></i>
-                        <p>JavaScript</p>
-                    </div>
-                    <div class="skill-item"><i class='bx bxl-html5'></i>
-                        <p>HTML</p>
-                    </div>
-                    <div class="skill-item"><i class='bx bxl-css3'></i>
-                        <p>CSS</p>
+            <div class="row g-4">
+                <!-- Programming Languages -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="skills-category glassmorphism h-100">
+                        <h3>Programming Languages</h3>
+                        <div class="icon-grid">
+                            <div class="skill-item"><i class='bx bxl-python'></i>
+                                <p>Python</p>
+                            </div>
+                            <div class="skill-item"><i class='bx bx-code-alt'></i>
+                                <p>C</p>
+                            </div>
+                            <div class="skill-item"><i class='bx bxl-javascript'></i>
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="skill-item"><i class='bx bxl-html5'></i>
+                                <p>HTML</p>
+                            </div>
+                            <div class="skill-item"><i class='bx bxl-css3'></i>
+                                <p>CSS</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Technologies & Skills -->
-            <div class="skills-category glassmorphism">
-                <h3>Technologies & Skills</h3>
-                <div class="icon-grid">
-                    <div class="skill-item"><i class='bx bxs-data'></i>
-                        <p>MySQL</p>
-                    </div>
-                    <div class="skill-item"><i class='bx bxs-megaphone'></i>
-                        <p>Digital Marketing</p>
+                <!-- Technologies & Skills -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="skills-category glassmorphism h-100">
+                        <h3>Technologies & Skills</h3>
+                        <div class="icon-grid">
+                            <div class="skill-item"><i class='bx bxs-data'></i>
+                                <p>MySQL</p>
+                            </div>
+                            <div class="skill-item"><i class='bx bxs-megaphone'></i>
+                                <p>Digital Marketing</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Tools -->
-            <div class="skills-category glassmorphism">
-                <h3>Tools</h3>
-                <div class="icon-grid">
-                    <div class="skill-item"><i class='bx bxl-git'></i>
-                        <p>Git</p>
-                    </div>
-                    <div class="skill-item"><i class='bx bxl-github'></i>
-                        <p>GitHub</p>
-                    </div>
-                    <div class="skill-item"><i class='bx bx-code-block'></i>
-                        <p>VS Code</p>
-                    </div>
-                    <div class="skill-item"><i class='bx bxs-palette'></i>
-                        <p>Canva</p>
-                    </div>
-                    <div class="skill-item"><i class='bx bxl-java'></i>
-                        <p>Eclipse</p>
-                    </div>
-                    <div class="skill-item"><i class='bx bx-spreadsheet'></i>
-                        <p>MS Excel</p>
+                <!-- Tools -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="skills-category glassmorphism h-100">
+                        <h3>Tools</h3>
+                        <div class="icon-grid">
+                            <div class="skill-item"><i class='bx bxl-git'></i>
+                                <p>Git</p>
+                            </div>
+                            <div class="skill-item"><i class='bx bxl-github'></i>
+                                <p>GitHub</p>
+                            </div>
+                            <div class="skill-item"><i class='bx bx-code-block'></i>
+                                <p>VS Code</p>
+                            </div>
+                            <div class="skill-item"><i class='bx bxs-palette'></i>
+                                <p>Canva</p>
+                            </div>
+                            <div class="skill-item"><i class='bx bxl-java'></i>
+                                <p>Eclipse</p>
+                            </div>
+                            <div class="skill-item"><i class='bx bx-spreadsheet'></i>
+                                <p>MS Excel</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -151,142 +179,186 @@
 
     <!-- Internship Section -->
     <section class="experience" id="experience">
-        <h2 class="heading">Internship <span>Experience</span></h2>
-        
-        <div class="experience-container" style="display: grid; gap: 3rem; max-width: 80rem; margin: 0 auto;">
-            <div class="experience-card glassmorphism">
-                <h3>Internship Trainee</h3>
-                <h4>Voxlom Innovative Solution (OPC) Private Limited, Panagudi</h4>
-                <span class="duration"><i class='bx bx-calendar'></i> February 2026 (16 Days)</span>
-                <p>
-                    Completed a 16-day internship at Voxlom Innovative Solution. During the internship, I showed good punctuality, dedication, and commitment to assigned tasks. I actively participated in the work, completed assignments on time, and gained practical experience in a professional environment.
-                </p>
-            </div>
+        <div class="container">
+            <h2 class="heading">Internship <span>Experience</span></h2>
+            
+            <div class="row justify-content-center g-5">
+                <div class="col-lg-10">
+                    <div class="experience-card glassmorphism mb-5">
+                        <h3>Internship Trainee</h3>
+                        <h4>Voxlom Innovative Solution (OPC) Private Limited, Panagudi</h4>
+                        <span class="duration"><i class='bx bx-calendar'></i> February 2026 (16 Days)</span>
+                        <p>
+                            Completed a 16-day internship at Voxlom Innovative Solution. During the internship, I showed good punctuality, dedication, and commitment to assigned tasks. I actively participated in the work, completed assignments on time, and gained practical experience in a professional environment.
+                        </p>
+                    </div>
 
-            <div class="experience-card glassmorphism">
-                <h3>Machine Learning Intern</h3>
-                <h4>Malaris Software Solutions, Tirunelveli</h4>
-                <span class="duration"><i class='bx bx-calendar'></i> June 2025 – July 2025</span>
-                <p>
-                    Worked on machine learning algorithms, data preprocessing, model training, and performance evaluation
-                    using Python.<br>
-                    Gained practical experience in supervised and unsupervised learning and real-world data problem solving.
-                </p>
+                    <div class="experience-card glassmorphism">
+                        <h3>Machine Learning Intern</h3>
+                        <h4>Malaris Software Solutions, Tirunelveli</h4>
+                        <span class="duration"><i class='bx bx-calendar'></i> June 2025 – July 2025</span>
+                        <p>
+                            Worked on machine learning algorithms, data preprocessing, model training, and performance evaluation
+                            using Python.<br>
+                            Gained practical experience in supervised and unsupervised learning and real-world data problem solving.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section class="projects" id="projects">
-        <h2 class="heading">My <span>Projects</span></h2>
+        <div class="container">
+            <h2 class="heading">My <span>Projects</span></h2>
 
-        <div class="projects-container">
-            <div class="project-box glassmorphism">
-                <i class='bx bx-cart'></i>
-                <h3>Fashion Hub – E-Commerce Website</h3>
-                <p>A web platform for online fashion shopping with product listing and user interface.</p>
-            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6">
+                    <div class="project-box glassmorphism h-100">
+                        <i class='bx bx-cart'></i>
+                        <h3>Fashion Hub – E-Commerce Website</h3>
+                        <p>A web platform for online fashion shopping with product listing and user interface.</p>
+                    </div>
+                </div>
 
-            <div class="project-box glassmorphism">
-                <i class='bx bx-book'></i>
-                <h3>Library Management System</h3>
-                <p>Built using Java and MySQL.</p>
-                <ul class="features">
-                    <li><i class='bx bx-check'></i> Book management</li>
-                    <li><i class='bx bx-check'></i> User records</li>
-                    <li><i class='bx bx-check'></i> Transaction management</li>
-                </ul>
+                <div class="col-md-6">
+                    <div class="project-box glassmorphism h-100">
+                        <i class='bx bx-book'></i>
+                        <h3>Library Management System</h3>
+                        <p>Built using Java and MySQL.</p>
+                        <ul class="features">
+                            <li><i class='bx bx-check'></i> Book management</li>
+                            <li><i class='bx bx-check'></i> User records</li>
+                            <li><i class='bx bx-check'></i> Transaction management</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Certifications Section -->
     <section class="certifications" id="certifications">
-        <h2 class="heading">Certifications & <span>Workshops</span></h2>
+        <div class="container">
+            <h2 class="heading">Certifications & <span>Workshops</span></h2>
 
-        <div class="certifications-container">
-            <div class="cert-box glassmorphism">
-                <i class='bx bx-bot'></i>
-                <h3>Naan Mudhalvan Robotic Process Automation Foundation Course</h3>
-                <p>Issued by: UiPath<br>S. Sivaprakash – 15 November 2024</p>
-            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="cert-box glassmorphism h-100">
+                        <i class='bx bx-bot'></i>
+                        <h3>Naan Mudhalvan Robotic Process Automation Foundation Course</h3>
+                        <p>Issued by: UiPath<br>S. Sivaprakash – 15 November 2024</p>
+                    </div>
+                </div>
 
-            <div class="cert-box glassmorphism">
-                <i class='bx bx-certification'></i>
-                <h3>DevOps and ReactJS Workshop</h3>
-                <p>6Solve IT Service Pvt Ltd – September 2025</p>
-            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="cert-box glassmorphism h-100">
+                        <i class='bx bx-certification'></i>
+                        <h3>DevOps and ReactJS Workshop</h3>
+                        <p>6Solve IT Service Pvt Ltd – September 2025</p>
+                    </div>
+                </div>
 
-            <div class="cert-box glassmorphism">
-                <i class='bx bxl-redhat'></i>
-                <h3>Red Hat System Administration (RH134)</h3>
-                <p>Hands-on training in Linux system management and configuration.</p>
+                <div class="col-lg-4 col-md-12">
+                    <div class="cert-box glassmorphism h-100">
+                        <i class='bx bxl-redhat'></i>
+                        <h3>Red Hat System Administration (RH134)</h3>
+                        <p>Hands-on training in Linux system management and configuration.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
+        <div class="container">
+            <h2 class="heading">Contact <span>Me</span></h2>
 
-        <div class="contact-container">
-            <div class="contact-info glassmorphism">
-                <h3>Let's Connect</h3>
-                <div class="contact-item">
-                    <i class='bx bx-envelope'></i>
-                    <p><a href="mailto:prakashsiva2004429@gmail.com">prakashsiva2004429@gmail.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <i class='bx bx-phone'></i>
-                    <p>+91 9344709406</p>
-                </div>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="contact-info glassmorphism h-100">
+                        <h3>Let's Connect</h3>
+                        <div class="contact-item">
+                            <i class='bx bx-envelope'></i>
+                            <p><a href="mailto:prakashsiva2004429@gmail.com">prakashsiva2004429@gmail.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class='bx bx-phone'></i>
+                            <p>+91 9344709406</p>
+                        </div>
 
-                <div class="social-links-contact">
-                    <a href="https://github.com/prakash7946" target="_blank" class="social-item">
-                        <i class='bx bxl-github'></i>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://linkedin.com/in/s-sivaprakash-b9174829b" target="_blank" class="social-item">
-                        <i class='bx bxl-linkedin'></i>
-                        <span>LinkedIn</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="contact-form glassmorphism">
-                <h3>Send a Message</h3>
-                <form action="https://formsubmit.co/prakashsiva2004429@gmail.com" method="POST">
-                    <!-- Security/Bot protection for FormSubmit -->
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="New Message from Portfolio Website Form!">
-                    
-                    <div class="input-box">
-                        <input type="text" name="name" placeholder="Full Name" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
+                        <div class="social-links-contact">
+                            <a href="https://github.com/prakash7946" target="_blank" class="social-item">
+                                <i class='bx bxl-github'></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/s-sivaprakash-b9174829b" target="_blank" class="social-item">
+                                <i class='bx bxl-linkedin'></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="input-box">
-                        <input type="number" name="phone" placeholder="Mobile Number" required>
-                        <input type="text" name="_subject_custom" placeholder="Email Subject" required>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="contact-form glassmorphism h-100">
+                        <h3>Send a Message</h3>
+                        <form action="https://formsubmit.co/prakashsiva2004429@gmail.com" method="POST">
+                            <!-- Security/Bot protection for FormSubmit -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_subject" value="New Message from Portfolio Website Form!">
+                            
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control bg-dark text-light border-secondary" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" name="email" class="form-control bg-dark text-light border-secondary" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" name="phone" class="form-control bg-dark text-light border-secondary" placeholder="Mobile Number" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="_subject_custom" class="form-control bg-dark text-light border-secondary" placeholder="Email Subject" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control bg-dark text-light border-secondary" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="col-12 text-center text-lg-start">
+                                    <input type="submit" value="Send Message" class="btn">
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                    <input type="submit" value="Send Message" class="btn">
-                </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-text">
-            <p>&copy; 2026 Sivaprakash S – Portfolio Website</p>
-        </div>
-        <div class="social-media-footer">
-            <a href="https://github.com/prakash7946" target="_blank"><i class='bx bxl-github'></i></a>
-            <a href="https://linkedin.com/in/s-sivaprakash-b9174829b" target="_blank"><i
-                    class='bx bxl-linkedin'></i></a>
-        </div>
-        <div class="footer-iconTop">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-md-4 text-center text-md-start">
+                    <div class="footer-text">
+                        <p class="mb-0">&copy; 2026 Sivaprakash S – Portfolio Website</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="social-media-footer">
+                        <a href="https://github.com/prakash7946" target="_blank"><i class='bx bxl-github'></i></a>
+                        <a href="https://linkedin.com/in/s-sivaprakash-b9174829b" target="_blank"><i
+                                class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <div class="footer-iconTop">
+                        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -324,6 +396,8 @@
         </div>
     </div>
 
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Typewriter Effect -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Scroll Reveal -->

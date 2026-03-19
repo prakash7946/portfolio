@@ -30,7 +30,6 @@ body {
 
 html {
     font-size: 62.5%;
-    overflow-x: hidden;
 }
 
 /* Glassmorphism utility */
@@ -52,7 +51,7 @@ html {
 /* Typography Headings */
 section {
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 10rem 0 2rem; /* Adjusted for Bootstrap containers */
 }
 
 .heading {
@@ -71,12 +70,9 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 2rem 0; /* Adjusted for container */
     background: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(15px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     z-index: 100;
     border-bottom: 1px solid var(--glass-border);
 }
@@ -91,7 +87,7 @@ section {
 .navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
-    margin-left: 4rem;
+    margin-left: 3rem; /* Reduced slightly */
     font-weight: 500;
     transition: .3s;
 }
@@ -113,7 +109,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
 }
 
 .home-content h3 {
@@ -187,7 +182,6 @@ section {
 }
 
 .home-img img {
-    width: 35vw;
     border-radius: 50%;
     box-shadow: 0 0 2rem var(--main-color);
     border: 5px solid rgba(56, 189, 248, 0.3);
@@ -203,11 +197,7 @@ section {
     background: var(--second-bg-color);
 }
 
-.about-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2.5rem;
-}
+/* About Card Styles */
 
 .about-card {
     padding: 3rem;
@@ -232,11 +222,7 @@ section {
 }
 
 /* Skills Section */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    gap: 3rem;
-}
+/* Skills Category Styles */
 
 .skills-category {
     padding: 3rem;
@@ -328,11 +314,7 @@ section {
 }
 
 /* Projects Section */
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    gap: 3rem;
-}
+/* Project Box Styles */
 
 .project-box {
     padding: 3rem;
@@ -380,11 +362,7 @@ section {
     background: var(--second-bg-color);
 }
 
-.certifications-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    gap: 3rem;
-}
+/* Cert Box Styles */
 
 .cert-box {
     padding: 3rem;
@@ -411,11 +389,7 @@ section {
 }
 
 /* Contact Section */
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3rem;
-}
+/* Contact Info Styles */
 
 .contact-info {
     padding: 3rem;
@@ -524,11 +498,7 @@ section {
 
 /* Footer Section */
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2rem 9%;
+    padding: 3rem 0;
     background: var(--second-bg-color);
 }
 
