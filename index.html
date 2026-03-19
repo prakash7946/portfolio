@@ -312,19 +312,33 @@
                             
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <input type="text" name="name" class="form-control bg-dark text-light border-secondary" placeholder="Full Name" required>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" name="name" class="form-control bg-dark text-light border-secondary" id="floatingName" placeholder="Full Name" required>
+                                        <label for="floatingName" class="text-secondary">Full Name</label>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" name="email" class="form-control bg-dark text-light border-secondary" placeholder="Email Address" required>
+                                    <div class="form-floating mb-3">
+                                        <input type="email" name="email" class="form-control bg-dark text-light border-secondary" id="floatingEmail" placeholder="Email Address" required>
+                                        <label for="floatingEmail" class="text-secondary">Email Address</label>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="number" name="phone" class="form-control bg-dark text-light border-secondary" placeholder="Mobile Number" required>
+                                    <div class="form-floating mb-3">
+                                        <input type="number" name="phone" class="form-control bg-dark text-light border-secondary" id="floatingPhone" placeholder="Mobile Number" required>
+                                        <label for="floatingPhone" class="text-secondary">Mobile Number</label>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" name="_subject_custom" class="form-control bg-dark text-light border-secondary" placeholder="Email Subject" required>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" name="_subject_custom" class="form-control bg-dark text-light border-secondary" id="floatingSubject" placeholder="Email Subject" required>
+                                        <label for="floatingSubject" class="text-secondary">Email Subject</label>
+                                    </div>
                                 </div>
-                                <div class="col-12">
-                                    <textarea name="message" class="form-control bg-dark text-light border-secondary" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                                <div class="col-12 text-center text-lg-start">
+                                    <div class="mb-3">
+                                        <textarea name="message" class="form-control bg-dark text-light border-secondary" id="floatingMessage" placeholder="Your Message" style="height: 150px" required></textarea>
+                                    </div>
                                 </div>
                                 <div class="col-12 text-center text-lg-start">
                                     <input type="submit" value="Send Message" class="btn">

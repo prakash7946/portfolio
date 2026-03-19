@@ -94,6 +94,9 @@ const generateResponse = (chatElement) => {
                 // Keep the contact links available, but prompt them to email directly.
                 chatElement.innerHTML = `<i class='bx bx-bot'></i>
                     <p>You can reach me directly below:<br><br>
+                    <strong>Name:</strong> Sivaprakash S<br>
+                    <strong>Email:</strong> <a href="mailto:prakashsiva2004429@gmail.com" style="color: var(--main-color); text-decoration: underline;">prakashsiva2004429@gmail.com</a><br>
+                    <strong>Phone:</strong> +91 9344709406<br><br>
                     <a href="https://wa.me/919344709406" target="_blank" style="color: var(--main-color); text-decoration: underline;"><i class='bx bxl-whatsapp'></i> WhatsApp</a><br>
                     <a href="mailto:prakashsiva2004429@gmail.com" style="color: var(--main-color); text-decoration: underline;"><i class='bx bx-envelope'></i> Email Me</a><br><br>
                     <strong>Or simply type <em>"email: your message"</em> right here and I'll send it directly to my inbox!</strong></p>`;
