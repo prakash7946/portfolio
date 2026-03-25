@@ -378,27 +378,45 @@
 
     <!-- Chat Bot Widget -->
     <div class="chatbot-toggler" id="chatbot-toggler">
-        <div class="robot-icon">
-            <span class="bot">🤖</span>
-            <span class="hand">👋</span>
+        <div class="eve-toggler-icon">
+            <div class="eve-face">
+                <div class="eve-eye"></div>
+                <div class="eve-eye"></div>
+            </div>
         </div>
         <i class='bx bx-x'></i>
     </div>
     
-    <div class="chatbot-container glassmorphism" id="chatbot-container">
-        <header>
-            <h2>Chat with Me</h2>
+    <div class="chatbot-container eve-theme" id="chatbot-container">
+        <header class="eve-header">
+            <div class="eve-profile">
+                <div class="avatar-wrapper eve-head">
+                    <div class="eve-face">
+                        <div class="eve-eye"></div>
+                        <div class="eve-eye"></div>
+                    </div>
+                </div>
+                <div class="robot-info">
+                    <h2>SP</h2>
+                    <span class="status"><i class='bx bxs-circle'></i> Online</span>
+                </div>
+            </div>
             <i class='bx bx-x' id="close-chatbot"></i>
         </header>
-        <ul class="chatbox" id="chatbox">
+        <ul class="chatbox eve-chatbox" id="chatbox">
             <li class="chat incoming">
-                <i class='bx bx-bot'></i>
-                <p>Hi there 👋<br>How can I help you today?</p>
+                <div class="eve-avatar-small">
+                    <div class="eve-face">
+                        <div class="eve-eye"></div>
+                        <div class="eve-eye"></div>
+                    </div>
+                </div>
+                <p>Hello! I am SP. ✨<br>Directive: Assist you with this portfolio.</p>
             </li>
         </ul>
-        <div class="chat-input">
-            <textarea id="chat-textarea" placeholder="Enter a message..." required></textarea>
-            <i class='bx bx-send' id="send-btn"></i>
+        <div class="chat-input eve-input-area">
+            <textarea id="chat-textarea" placeholder="Message SP..." required></textarea>
+            <button class="send-btn-eve" id="send-btn"><i class='bx bx-send'></i></button>
         </div>
     </div>
 

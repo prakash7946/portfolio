@@ -66,7 +66,7 @@ const inputInitHeight = chatInput ? chatInput.scrollHeight : 45;
 const createChatLi = (message, className) => {
     const chatLi = document.createElement("li");
     chatLi.classList.add("chat", className);
-    let chatContent = className === "outgoing" ? `<p></p>` : `<i class='bx bx-bot'></i><p></p>`;
+    let chatContent = className === "outgoing" ? `<p></p>` : `<div class="eve-avatar-small"><div class="eve-face"><div class="eve-eye"></div><div class="eve-eye"></div></div></div><p></p>`;
     chatLi.innerHTML = chatContent;
     chatLi.querySelector("p").textContent = message;
     return chatLi;
@@ -92,7 +92,7 @@ const generateResponse = (chatElement) => {
                 response = "I have worked on a Fashion Hub E-Commerce Website and a Library Management System. Check out my Projects section!";
             } else if (lowerMsg.includes("contact") || lowerMsg.includes("email") || lowerMsg.includes("message") || lowerMsg.includes("whatsapp")) {
                 // Keep the contact links available, but prompt them to email directly.
-                chatElement.innerHTML = `<i class='bx bx-bot'></i>
+                chatElement.innerHTML = `<div class="eve-avatar-small"><div class="eve-face"><div class="eve-eye"></div><div class="eve-eye"></div></div></div>
                     <p>You can reach me directly below:<br><br>
                     <strong>Name:</strong> Sivaprakash S<br>
                     <strong>Email:</strong> <a href="mailto:prakashsiva2004429@gmail.com" style="color: var(--main-color); text-decoration: underline;">prakashsiva2004429@gmail.com</a><br>
