@@ -63,6 +63,26 @@ const sendChatBtn = document.querySelector("#send-btn");
 let userMessage = null;
 const inputInitHeight = chatInput ? chatInput.scrollHeight : 45;
 
+const setReaction = (reactionClass, duration = 3000) => {
+    const faces = document.querySelectorAll(".chatbot-toggler .eve-face, .eve-header .eve-face");
+    
+    faces.forEach(face => {
+        // Remove all reaction classes
+        face.classList.remove('reaction-happy', 'reaction-thinking', 'reaction-sad', 'reaction-heart', 'reaction-excited');
+        
+        if (reactionClass) {
+            face.classList.add(reactionClass);
+            
+            // Auto removing reaction
+            if (duration > 0) {
+                setTimeout(() => {
+                    face.classList.remove(reactionClass);
+                }, duration);
+            }
+        }
+    });
+};
+
 const createChatLi = (message, className) => {
     const chatLi = document.createElement("li");
     chatLi.classList.add("chat", className);
@@ -74,22 +94,34 @@ const createChatLi = (message, className) => {
 
 const generateResponse = (chatElement) => {
     const messageElement = chatElement.querySelector("p");
+    const avatarFace = chatElement.querySelector(".eve-face");
     
     // Simulate simple bot logic
     setTimeout(() => {
         let response = "Thanks for your message! I'll get back to you soon.";
+        let reactionToApply = null;
         
         if (userMessage) {
             const lowerMsg = userMessage.toLowerCase();
             
             if (lowerMsg.includes("hello") || lowerMsg.includes("hi")) {
                 response = "Hello! How can I help you today?";
+                reactionToApply = "reaction-happy";
             } else if (lowerMsg.includes("skills") || lowerMsg.includes("tech")) {
                 response = "I have experience with Python, C, JavaScript, HTML, CSS, and MySQL.";
+                reactionToApply = "reaction-thinking";
             } else if (lowerMsg.includes("experience") || lowerMsg.includes("internship")) {
                 response = "I worked as a Machine Learning Intern at Malaris Software Solutions.";
+                reactionToApply = "reaction-thinking";
             } else if (lowerMsg.includes("project")) {
                 response = "I have worked on a Fashion Hub E-Commerce Website and a Library Management System. Check out my Projects section!";
+                reactionToApply = "reaction-excited";
+            } else if (lowerMsg.includes("cute") || lowerMsg.includes("love") || lowerMsg.includes("beautiful") || lowerMsg.includes("awesome") || lowerMsg.includes("nice")) {
+                response = "Aww, thank you! You're making my circuits blush! 💖";
+                reactionToApply = "reaction-heart";
+            } else if (lowerMsg.includes("bad") || lowerMsg.includes("sad") || lowerMsg.includes("hate")) {
+                response = "Oh no, I'm sorry to hear that. I hope things get better!";
+                reactionToApply = "reaction-sad";
             } else if (lowerMsg.includes("contact") || lowerMsg.includes("email") || lowerMsg.includes("message") || lowerMsg.includes("whatsapp")) {
                 // Keep the contact links available, but prompt them to email directly.
                 chatElement.innerHTML = `<div class="eve-avatar-small"><div class="eve-face"><div class="eve-eye"></div><div class="eve-eye"></div></div></div>
@@ -115,8 +147,31 @@ const generateResponse = (chatElement) => {
             }
         }
 
-        messageElement.textContent = response;
-        chatbox.scrollTo(0, chatbox.scrollHeight);
+        if (reactionToApply) {
+            setReaction(reactionToApply, 3000);
+            if (avatarFace) avatarFace.classList.add(reactionToApply);
+            messageElement.className = reactionToApply + "-bg";
+        } else {
+            setReaction('reaction-happy', 2000); // Default happy response
+            if (avatarFace) avatarFace.classList.add('reaction-happy');
+            messageElement.className = "reaction-happy-bg";
+        }
+
+        messageElement.textContent = "";
+        messageElement.classList.add("robot-typing");
+        let i = 0;
+        
+        const typeWriter = () => {
+            if (i < response.length) {
+                messageElement.textContent += response.charAt(i);
+                i++;
+                chatbox.scrollTo(0, chatbox.scrollHeight);
+                setTimeout(typeWriter, 30);
+            } else {
+                messageElement.classList.remove("robot-typing");
+            }
+        };
+        typeWriter();
     }, 600);
 }
 
@@ -168,6 +223,7 @@ const handleChat = () => {
         const incomingChatLi = createChatLi("Typing...", "incoming");
         chatbox.appendChild(incomingChatLi);
         chatbox.scrollTo(0, chatbox.scrollHeight);
+        setReaction('reaction-thinking', 600);
         generateResponse(incomingChatLi);
     }, 400);
 }
