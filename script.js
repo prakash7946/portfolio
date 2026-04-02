@@ -340,3 +340,36 @@ document.addEventListener('DOMContentLoaded', function () {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
 });
+
+// Resume Viewer Modal
+const viewResumeBtn = document.getElementById('view-resume-btn');
+const resumeModalOverlay = document.getElementById('resume-modal-overlay');
+const resumeCloseBtn = document.getElementById('resume-close-btn');
+
+function openResumeModal(e) {
+    if (e) e.preventDefault();
+    resumeModalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeResumeModal() {
+    resumeModalOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+if (viewResumeBtn) viewResumeBtn.addEventListener('click', openResumeModal);
+if (resumeCloseBtn) resumeCloseBtn.addEventListener('click', closeResumeModal);
+
+// Close on backdrop click
+if (resumeModalOverlay) {
+    resumeModalOverlay.addEventListener('click', (e) => {
+        if (e.target === resumeModalOverlay) closeResumeModal();
+    });
+}
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && resumeModalOverlay && resumeModalOverlay.classList.contains('active')) {
+        closeResumeModal();
+    }
+});

@@ -50,8 +50,8 @@
                         </div>
             
                         <div class="btn-group">
-                            <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
-                            <a href="#projects" class="btn">View Projects</a>
+                            <a href="#" class="btn btn-outline" id="view-resume-btn"><i class='bx bx-show'></i> View Resume</a>
+                            <a href="assets/resume.pdf" class="btn" download><i class='bx bx-download'></i> Download Resume</a>
                             <a href="#contact" class="btn">Contact Me</a>
                         </div>
                     </div>
@@ -428,6 +428,34 @@
         </header>
         <div class="puzzle-content" id="puzzle-content">
             <!-- Game gets injected here -->
+        </div>
+    </div>
+
+    <!-- Resume Viewer Modal -->
+    <div class="resume-modal-overlay" id="resume-modal-overlay">
+        <div class="resume-modal">
+            <div class="resume-modal-header">
+                <div class="resume-modal-title">
+                    <i class='bx bx-file'></i>
+                    <span>Sivaprakash S – Resume</span>
+                </div>
+                <div class="resume-modal-actions">
+                    <a href="assets/resume.pdf" class="resume-action-btn download-btn" download title="Download Resume">
+                        <i class='bx bx-download'></i> Download
+                    </a>
+                    <button class="resume-close-btn" id="resume-close-btn" title="Close">
+                        <i class='bx bx-x'></i>
+                    </button>
+                </div>
+            </div>
+            <div class="resume-modal-body">
+                <iframe src="assets/resume.pdf" id="resume-iframe" title="Resume Preview"></iframe>
+                <div class="resume-fallback" id="resume-fallback">
+                    <i class='bx bx-file-blank'></i>
+                    <p>Unable to preview the resume in your browser.</p>
+                    <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
+                </div>
+            </div>
         </div>
     </div>
 
