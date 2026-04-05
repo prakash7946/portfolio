@@ -373,3 +373,73 @@ document.addEventListener('keydown', (e) => {
         closeResumeModal();
     }
 });
+
+// ======== Artist Work Modal ========
+const openArtistBtn = document.getElementById('open-artist-modal');
+const artistModalOverlay = document.getElementById('artist-modal-overlay');
+const artistCloseBtn = document.getElementById('artist-close-btn');
+const imgZoomOverlay = document.getElementById('img-zoom-overlay');
+const imgZoomClose = document.getElementById('img-zoom-close');
+const imgZoomFull = document.getElementById('img-zoom-full');
+const artistVideo = document.querySelector('.artist-video');
+
+function openArtistModal() {
+    artistModalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeArtistModal() {
+    artistModalOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+    if (artistVideo) artistVideo.pause();
+}
+
+function openImgZoom() {
+    imgZoomOverlay.classList.add('active');
+}
+
+function closeImgZoom() {
+    imgZoomOverlay.classList.remove('active');
+}
+
+if (openArtistBtn) openArtistBtn.addEventListener('click', openArtistModal);
+if (artistCloseBtn) artistCloseBtn.addEventListener('click', closeArtistModal);
+
+if (artistModalOverlay) {
+    // Close modal on backdrop click
+    artistModalOverlay.addEventListener('click', (e) => {
+        if (e.target === artistModalOverlay) closeArtistModal();
+    });
+    // Generic zoom: click any artist-overlay to zoom that card's image
+    artistModalOverlay.addEventListener('click', (e) => {
+        const overlay = e.target.closest('.artist-overlay');
+        if (overlay) {
+            const img = overlay.previousElementSibling;
+            if (img && img.tagName === 'IMG') {
+                imgZoomFull.src = img.src;
+                imgZoomFull.alt = img.alt;
+                openImgZoom();
+            }
+        }
+    });
+}
+
+if (imgZoomClose) imgZoomClose.addEventListener('click', closeImgZoom);
+if (imgZoomOverlay) {
+    imgZoomOverlay.addEventListener('click', (e) => {
+        if (e.target === imgZoomOverlay) closeImgZoom();
+    });
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        if (imgZoomOverlay && imgZoomOverlay.classList.contains('active')) {
+            closeImgZoom();
+        } else if (artistModalOverlay && artistModalOverlay.classList.contains('active')) {
+            closeArtistModal();
+        } else if (resumeModalOverlay && resumeModalOverlay.classList.contains('active')) {
+            closeResumeModal();
+        }
+    }
+});
+

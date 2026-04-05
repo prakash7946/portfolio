@@ -635,14 +635,17 @@ section {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
     z-index: 1000;
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
 
-body.show-chatbot .chatbot-toggler {
-    transform: rotate(90deg);
+.chatbot-toggler:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 28px rgba(56, 189, 248, 0.65);
 }
+
+
 
 .chatbot-toggler i {
     position: absolute;
@@ -1313,5 +1316,294 @@ body.show-chatbot .chatbot-container.eve-theme {
     .resume-action-btn.download-btn {
         padding: 0.6rem 1.2rem;
         font-size: 1.3rem;
+    }
+}
+
+/* ======== Artist Work (Canva) Button ======== */
+.canva-skill-item {
+    height: auto !important;
+    min-height: 12rem;
+    padding: 1rem 0.8rem;
+    gap: 0.6rem !important;
+}
+
+.artist-view-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    color: #0f172a;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+    white-space: nowrap;
+}
+
+.artist-view-btn i {
+    font-size: 1.4rem !important;
+    color: #0f172a !important;
+}
+
+.artist-view-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.7);
+}
+
+/* ======== Artist Work Modal Overlay ======== */
+.artist-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 20000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.artist-modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.artist-modal {
+    background: linear-gradient(145deg, #0f172a, #1e293b);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 2rem;
+    width: 100%;
+    max-width: 920px;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(56, 189, 248, 0.1);
+    transform: scale(0.92) translateY(20px);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.artist-modal-overlay.active .artist-modal {
+    transform: scale(1) translateY(0);
+}
+
+.artist-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 2.5rem;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+    background: rgba(56, 189, 248, 0.05);
+    flex-shrink: 0;
+}
+
+.artist-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.artist-modal-title i {
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+
+.artist-close-btn {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--text-color);
+}
+
+.artist-close-btn i {
+    font-size: 2.4rem;
+}
+
+.artist-close-btn:hover {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: var(--main-color);
+    transform: rotate(90deg);
+}
+
+.artist-modal-body {
+    overflow-y: auto;
+    padding: 2.5rem;
+    flex: 1;
+}
+
+/* ======== Artist Gallery Grid ======== */
+.artist-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.artist-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.artist-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+}
+
+.artist-card-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.6rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--main-color);
+    background: rgba(56, 189, 248, 0.07);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.artist-card-label i {
+    font-size: 2rem;
+}
+
+.artist-media-wrap {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    aspect-ratio: 3/2;
+}
+
+.artist-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.artist-card:hover .artist-img {
+    transform: scale(1.04);
+}
+
+.artist-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Zoom overlay on image */
+.artist-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-in;
+    transition: background 0.3s;
+}
+
+.artist-overlay i {
+    font-size: 4rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: scale(0.7);
+    filter: drop-shadow(0 0 6px rgba(56,189,248,0.8));
+}
+
+.artist-media-wrap:hover .artist-overlay {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.artist-media-wrap:hover .artist-overlay i {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ======== Image Zoom Lightbox ======== */
+.img-zoom-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 30000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.img-zoom-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.img-zoom-box {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.img-zoom-full {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 1rem;
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.3);
+    display: block;
+}
+
+.img-zoom-close {
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    background: var(--main-color);
+    color: #0f172a;
+    border: none;
+    border-radius: 50%;
+    width: 3.6rem;
+    height: 3.6rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+}
+
+.img-zoom-close:hover {
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Responsive Artist Gallery */
+@media (max-width: 640px) {
+    .artist-gallery {
+        grid-template-columns: 1fr;
+    }
+    .artist-modal-title {
+        font-size: 1.6rem;
     }
 }

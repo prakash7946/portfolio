@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="show-chatbot">
+<body>
     <!-- Navbar -->
     <header class="header">
         <div class="container d-flex justify-content-between align-items-center">
@@ -161,8 +161,12 @@
                             <div class="skill-item"><i class='bx bx-code-block'></i>
                                 <p>VS Code</p>
                             </div>
-                            <div class="skill-item"><i class='bx bxs-palette'></i>
+                            <div class="skill-item canva-skill-item">
+                                <i class='bx bxs-palette'></i>
                                 <p>Canva</p>
+                                <button class="artist-view-btn" id="open-artist-modal" title="View Artist Work">
+                                    <i class='bx bx-images'></i> View Art
+                                </button>
                             </div>
                             <div class="skill-item"><i class='bx bxl-java'></i>
                                 <p>Eclipse</p>
@@ -456,6 +460,94 @@
                     <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Artist Work Modal -->
+    <div class="artist-modal-overlay" id="artist-modal-overlay">
+        <div class="artist-modal">
+            <div class="artist-modal-header">
+                <div class="artist-modal-title">
+                    <i class='bx bxs-palette'></i>
+                    <span>🎨 My Canva Artist Work</span>
+                </div>
+                <button class="artist-close-btn" id="artist-close-btn" title="Close">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+            <div class="artist-modal-body">
+                <div class="artist-gallery">
+                    <!-- Happy Pongal -->
+                    <div class="artist-card">
+                        <div class="artist-card-label"><i class='bx bx-image'></i> Happy Pongal Design</div>
+                        <div class="artist-media-wrap">
+                            <img src="HAPPY PONGAL for sp.png" alt="Happy Pongal Design" class="artist-img artist-zoomable" />
+                            <div class="artist-overlay" title="Click to zoom">
+                                <i class='bx bx-zoom-in'></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tom Poster -->
+                    <div class="artist-card">
+                        <div class="artist-card-label"><i class='bx bx-image'></i> Tom Poster</div>
+                        <div class="artist-media-wrap">
+                            <img src="tom poster.png" alt="Tom Poster Design" class="artist-img artist-zoomable" />
+                            <div class="artist-overlay" title="Click to zoom">
+                                <i class='bx bx-zoom-in'></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Biometric Digital Center -->
+                    <div class="artist-card">
+                        <div class="artist-card-label"><i class='bx bx-fingerprint'></i> Biometric Digital Center</div>
+                        <div class="artist-media-wrap">
+                            <img src="BIOMETRIC DIGITAL CENTER.png" alt="Biometric Digital Center" class="artist-img artist-zoomable" />
+                            <div class="artist-overlay" title="Click to zoom">
+                                <i class='bx bx-zoom-in'></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cloud Kitchen SP -->
+                    <div class="artist-card">
+                        <div class="artist-card-label"><i class='bx bxs-cloud'></i> Cloud Kitchen SP</div>
+                        <div class="artist-media-wrap">
+                            <img src="cloud kitchen sp.png" alt="Cloud Kitchen SP" class="artist-img artist-zoomable" />
+                            <div class="artist-overlay" title="Click to zoom">
+                                <i class='bx bx-zoom-in'></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Poster SP 1 -->
+                    <div class="artist-card">
+                        <div class="artist-card-label"><i class='bx bx-image'></i> SP Poster</div>
+                        <div class="artist-media-wrap">
+                            <img src="poster sp 1.png" alt="SP Poster" class="artist-img artist-zoomable" />
+                            <div class="artist-overlay" title="Click to zoom">
+                                <i class='bx bx-zoom-in'></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pongal Anime Video -->
+                    <div class="artist-card">
+                        <div class="artist-card-label"><i class='bx bx-video'></i> Pongal Anime Motion</div>
+                        <div class="artist-media-wrap">
+                            <video src="pongal ANIME SP SIVA.mp4" controls class="artist-video" preload="metadata"
+                                poster="HAPPY PONGAL for sp.png">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Zoom Lightbox -->
+    <div class="img-zoom-overlay" id="img-zoom-overlay">
+        <div class="img-zoom-box">
+            <button class="img-zoom-close" id="img-zoom-close"><i class='bx bx-x'></i></button>
+            <img src="" alt="Zoomed Image" class="img-zoom-full" id="img-zoom-full" />
+        </div>
         </div>
     </div>
 
