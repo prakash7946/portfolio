@@ -358,6 +358,40 @@ section {
     margin: 0;
 }
 
+/* Project Live Demo Button */
+.project-live-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+    padding: 0.9rem 2.2rem;
+    background: transparent;
+    color: var(--main-color);
+    border: 0.2rem solid var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.project-live-btn i {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.project-live-btn:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1.2rem var(--main-color);
+    text-decoration: none;
+}
+
+.project-live-btn:hover i {
+    transform: translate(3px, -3px);
+}
+
 /* Certifications Section */
 .certifications {
     background: var(--second-bg-color);
