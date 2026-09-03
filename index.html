@@ -10,7 +10,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome / BoxIcons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Devicon (Authentic Brand Logos) -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,7 +21,10 @@
     <header class="header">
         <div class="container d-flex justify-content-between align-items-center">
             <a href="#" class="logo">Sivaprakash S.</a>
-            <i class='bx bx-menu' id="menu-icon"></i>
+            <div id="menu-icon" class="menu-icon-btn" aria-label="Toggle navigation">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" class="hamburger-icon"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" class="close-icon"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
             <nav class="navbar">
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About</a>
@@ -44,14 +49,21 @@
                             solving real-world problems using data and technology.</p>
             
                         <div class="social-media">
-                            <a href="https://github.com/prakash7946" target="_blank" data-bs-toggle="tooltip" title="GitHub"><i class='bx bxl-github'></i></a>
-                            <a href="https://linkedin.com/in/s-sivaprakash-b9174829b" target="_blank" data-bs-toggle="tooltip" title="LinkedIn"><i
-                                    class='bx bxl-linkedin'></i></a>
+                            <a href="https://github.com/prakash7946" target="_blank" data-bs-toggle="tooltip" title="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                            </a>
+                            <a href="https://linkedin.com/in/s-sivaprakash-b9174829b" target="_blank" data-bs-toggle="tooltip" title="LinkedIn" class="linkedin-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.63 1.63 0 0 0 0-3.26 1.63 1.63 0 0 0 0 3.26M7.85 18.5V10.13H5.06V18.5h2.79Z"/></svg>
+                            </a>
                         </div>
             
                         <div class="btn-group">
-                            <a href="#" class="btn btn-outline" id="view-resume-btn"><i class='bx bx-show'></i> View Resume</a>
-                            <a href="assets/resume.pdf" class="btn" download><i class='bx bx-download'></i> Download Resume</a>
+                            <a href="#" class="btn btn-outline" id="view-resume-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="vertical-align: -2px;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>View Resume
+                            </a>
+                            <a href="assets/resume.pdf" class="btn" download>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="vertical-align: -2px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Resume
+                            </a>
                             <a href="#contact" class="btn">Contact Me</a>
                         </div>
                     </div>
@@ -74,6 +86,9 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="about-card glassmorphism h-100">
+                        <div class="about-card-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
                         <h3>Personal Info</h3>
                         <p><strong>Name:</strong> Sivaprakash S</p>
                         <p><strong>Phone:</strong> +91 9344709406</p>
@@ -84,6 +99,9 @@
 
                 <div class="col-md-4">
                     <div class="about-card glassmorphism h-100">
+                        <div class="about-card-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                        </div>
                         <h3>Education</h3>
                         <p><strong>B.E. Computer Science Engineering</strong></p>
                         <p>(2022 – Present)</p>
@@ -93,6 +111,9 @@
 
                 <div class="col-md-4">
                     <div class="about-card glassmorphism objective h-100">
+                        <div class="about-card-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        </div>
                         <h3>Objective</h3>
                         <p>To build a successful career in Software Development and Machine Learning by applying technical
                             skills to create innovative and efficient solutions.</p>
@@ -113,20 +134,67 @@
                     <div class="skills-category glassmorphism h-100">
                         <h3>Programming Languages</h3>
                         <div class="icon-grid">
-                            <div class="skill-item"><i class='bx bxl-python'></i>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="py-blue" x1="4" y1="4" x2="30" y2="28" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#387EB8"/>
+                                            <stop offset="1" stop-color="#366994"/>
+                                        </linearGradient>
+                                        <linearGradient id="py-yellow" x1="44" y1="44" x2="18" y2="20" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FFE873"/>
+                                            <stop offset="1" stop-color="#FFD43B"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M23.7 4C12.9 4 13.5 8.7 13.5 8.7L13.6 13.6H24.2V15.2H9.2C5 15.2 2.8 19 2.8 23.3C2.8 28.2 6.5 28 6.5 28H10.9V23.8C10.9 17.6 16.3 17.7 16.3 17.7H24.2C28.4 17.7 31.8 14.1 31.8 9.9C31.8 2.8 28.5 4 23.7 4ZM18.5 8.5C19.7 8.5 20.7 9.5 20.7 10.7C20.7 11.9 19.7 12.9 18.5 12.9C17.3 12.9 16.3 11.9 16.3 10.7C16.3 9.5 17.3 8.5 18.5 8.5Z" fill="url(#py-blue)"/>
+                                    <path d="M24.3 44C35.1 44 34.5 39.3 34.5 39.3L34.4 34.4H23.8V32.8H38.8C43 32.8 45.2 29 45.2 24.7C45.2 19.8 41.5 20 41.5 20H37.1V24.2C37.1 30.4 31.7 30.3 31.7 30.3H23.8C19.6 30.3 16.2 33.9 16.2 38.1C16.2 45.2 19.5 44 24.3 44ZM29.5 39.5C28.3 39.5 27.3 38.5 27.3 37.3C27.3 36.1 28.3 35.1 29.5 35.1C30.7 35.1 31.7 36.1 31.7 37.3C31.7 38.5 30.7 39.5 29.5 39.5Z" fill="url(#py-yellow)"/>
+                                </svg>
                                 <p>Python</p>
                             </div>
-                            <div class="skill-item"><i class='bx bx-code-alt'></i>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.2 6C21.2 6 25 10 20.5 14.8C16.5 19.2 20.5 22.5 20.5 22.5C20.5 22.5 17 18.8 21.2 14.8C25.2 10.8 21.2 6 21.2 6Z" fill="#5382A1"/>
+                                    <path d="M27.8 4C27.8 4 32 8.5 26.8 14.2C22.2 19.2 26.5 23 26.5 23C26.5 23 22.5 18.5 27.5 13.8C32 9.5 27.8 4 27.8 4Z" fill="#E76F00"/>
+                                    <path d="M14 25.5C14 25.5 10.5 26.8 12.8 28.8C15.2 31.2 29.5 31.5 35.5 29C37.8 28.2 35.5 25.5 35.5 25.5C32.2 27.8 18.5 27.5 14 25.5Z" fill="#5382A1"/>
+                                    <path d="M15 31.5C15 31.5 8.5 33.5 13 35.8C17.2 38 33 38.2 37 35C38.5 33.8 36 31.5 36 31.5C31 34 19 34 15 31.5Z" fill="#E76F00"/>
+                                    <path d="M29.5 40.5C21 42 14 41 9.8 39C9 38.6 7.8 39.8 9.5 40.5C14.5 42.8 23.5 43.5 32 41.5C34.5 40.8 32 40 29.5 40.5Z" fill="#5382A1"/>
+                                    <path d="M33.5 22.5C33.5 22.5 37.5 23.2 37.5 26.2C37.5 29.2 33.5 30.5 33.5 30.5V28.5C35 28 36 27.2 36 26.2C36 25.2 34.5 24.5 33.5 24.5V22.5Z" fill="#EA2D2E"/>
+                                    <path d="M14.5 22.5H33.5L31.5 29.8C31.5 32.5 27.8 34.5 23.5 34.5C19.2 34.5 16.5 32.5 16.5 29.8L14.5 22.5Z" fill="#E76F00"/>
+                                </svg>
+                                <p>Java</p>
+                            </div>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 3L42.2 13.5V34.5L24 45L5.8 34.5V13.5L24 3Z" fill="#00599C"/>
+                                    <path d="M24 7.5L38.3 15.8V32.2L24 40.5L9.7 32.2V15.8L24 7.5Z" fill="#659AD2"/>
+                                    <path d="M24 13.5C18.2 13.5 13.5 18.2 13.5 24C13.5 29.8 18.2 34.5 24 34.5C28.2 34.5 31.8 32 33.5 28.5L28.8 26C27.8 28 26 29.5 24 29.5C21 29.5 18.5 27 18.5 24C18.5 21 21 18.5 24 18.5C26 18.5 27.8 20 28.8 22L33.5 19.5C31.8 16 28.2 13.5 24 13.5Z" fill="#FFFFFF"/>
+                                </svg>
                                 <p>C</p>
                             </div>
-                            <div class="skill-item"><i class='bx bxl-javascript'></i>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="48" height="48" rx="8" fill="#F7DF1E"/>
+                                    <path d="M14.5 36.2L18.8 33.6C19.7 35.2 20.8 36.4 22.9 36.4C24.7 36.4 26 35.5 26 33.2V20.5H30.8V33.3C30.8 38 27.9 40.3 23.3 40.3C19.3 40.3 16.6 38.3 14.5 36.2ZM33.2 35.8L37.5 33.3C38.6 35.1 40.2 36.3 42.4 36.3C44.4 36.3 45.6 35.3 45.6 33.8C45.6 32.1 44.4 31.5 42 30.4L40.7 29.8C36.9 28.1 34.5 26.1 34.5 22C34.5 18.2 37.5 15.3 42.1 15.3C45.5 15.3 47.8 16.9 49.5 19.8L45.5 22.3C44.6 20.7 43.6 20 42.1 20C40.7 20 39.6 20.8 39.6 22C39.6 23.5 40.6 24.1 43 25.1L44.2 25.6C48.5 27.4 50.8 29.4 50.8 33.6C50.8 38 47.3 40.3 42.1 40.3C37.6 40.3 34.7 38.1 33.2 35.8Z" fill="#000000" transform="translate(-5, -1) scale(0.92)"/>
+                                </svg>
                                 <p>JavaScript</p>
                             </div>
-                            <div class="skill-item"><i class='bx bxl-html5'></i>
-                                <p>HTML</p>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.2 4L11.5 41L24 44.5L36.5 41L39.8 4H8.2Z" fill="#E44D26"/>
+                                    <path d="M24 41.7L33.7 39L36.4 7.2H24V41.7Z" fill="#F16529"/>
+                                    <path d="M24 17.5H18.7L18.3 13.1H24V8.8H13.6L14.7 21.8H24V17.5ZM24 29.7L19.5 28.5L19.2 25.2H14.9L15.5 31.8L24 34.2V29.7Z" fill="#EBEBEB"/>
+                                    <path d="M24 17.5V13.1H29.3L29.7 8.8H24V8.8H34.4L33.6 17.5H24ZM24 29.7V34.2L32.5 31.8L33.4 21.8H24V26.1H28.7L28.3 29.7L24 29.7Z" fill="#FFFFFF"/>
+                                </svg>
+                                <p>HTML5</p>
                             </div>
-                            <div class="skill-item"><i class='bx bxl-css3'></i>
-                                <p>CSS</p>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.2 4L11.5 41L24 44.5L36.5 41L39.8 4H8.2Z" fill="#1572B6"/>
+                                    <path d="M24 41.7L33.7 39L36.4 7.2H24V41.7Z" fill="#33A9DC"/>
+                                    <path d="M24 17.6H18.8L18.4 13.2H24V8.8H13.6L14.7 22H24V17.6ZM24 30L19.5 28.8L19.2 25.5H14.9L15.5 32.1L24 34.5V30Z" fill="#EBEBEB"/>
+                                    <path d="M24 17.6V22H29.1L28.7 26.4L24 27.7V32.2L32.5 29.8L33.3 20L33.5 17.6H24ZM24 8.8V13.2H33.9L34.3 8.8H24Z" fill="#FFFFFF"/>
+                                </svg>
+                                <p>CSS3</p>
                             </div>
                         </div>
                     </div>
@@ -137,10 +205,92 @@
                     <div class="skills-category glassmorphism h-100">
                         <h3>Technologies & Skills</h3>
                         <div class="icon-grid">
-                            <div class="skill-item"><i class='bx bxs-data'></i>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M38.5 16.5C36 12.5 30.5 9 24 9.5C18.5 9.9 14.2 13.5 12.5 18C11.5 20.8 11.8 24.2 13.5 26.8C14.8 28.8 17.2 30.5 19.5 31.2C18.2 31.8 16.2 32.2 14.5 32C12.5 31.8 10 30.8 8.5 29.5C7.8 28.8 6.5 29.5 7 30.5C8.8 33.5 13.2 36.2 17.8 36C22.2 35.8 26.5 33.5 29.5 30.5C33.8 26.2 35.8 20.5 38.5 16.5Z" fill="#00758F"/>
+                                    <path d="M23 20.5C21 21.5 19 23.5 18 26C20 25.5 22.5 24 23 20.5Z" fill="#F29111"/>
+                                    <path d="M38.5 16.5C40.5 15.5 43.5 15 45 16C43.5 17.2 41 17.5 38.5 16.5Z" fill="#F29111"/>
+                                    <path d="M30 11.5C32.5 9.5 36 8.5 38.5 9C37 10.8 34.5 12 30 11.5Z" fill="#00758F"/>
+                                    <circle cx="33.5" cy="15.5" r="1.5" fill="#FFFFFF"/>
+                                    <path d="M6 40C10 38 14 41 18 40C22 39 26 37 30 39C34 41 38 39 42 39.5" stroke="#00758F" stroke-width="2.5" stroke-linecap="round"/>
+                                </svg>
                                 <p>MySQL</p>
                             </div>
-                            <div class="skill-item"><i class='bx bxs-megaphone'></i>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="ml-grad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#38BDF8"/>
+                                            <stop offset="0.5" stop-color="#818CF8"/>
+                                            <stop offset="1" stop-color="#F43F5E"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <line x1="12" y1="14" x2="24" y2="8" stroke="url(#ml-grad)" stroke-width="2" stroke-opacity="0.7"/>
+                                    <line x1="12" y1="14" x2="24" y2="24" stroke="url(#ml-grad)" stroke-width="2" stroke-opacity="0.8"/>
+                                    <line x1="12" y1="34" x2="24" y2="24" stroke="url(#ml-grad)" stroke-width="2" stroke-opacity="0.8"/>
+                                    <line x1="12" y1="34" x2="24" y2="40" stroke="url(#ml-grad)" stroke-width="2" stroke-opacity="0.7"/>
+                                    <line x1="24" y1="8" x2="36" y2="14" stroke="url(#ml-grad)" stroke-width="2" stroke-opacity="0.7"/>
+                                    <line x1="24" y1="24" x2="36" y2="14" stroke="url(#ml-grad)" stroke-width="2" stroke-opacity="0.8"/>
+                                    <line x1="24" y1="24" x2="36" y2="34" stroke="url(#ml-grad)" stroke-width="2" stroke-opacity="0.8"/>
+                                    <line x1="24" y1="40" x2="36" y2="34" stroke="url(#ml-grad)" stroke-width="2" stroke-opacity="0.7"/>
+                                    <line x1="24" y1="8" x2="24" y2="24" stroke="url(#ml-grad)" stroke-width="2" stroke-opacity="0.5"/>
+                                    <line x1="24" y1="24" x2="24" y2="40" stroke="url(#ml-grad)" stroke-width="2" stroke-opacity="0.5"/>
+                                    <circle cx="12" cy="14" r="4.5" fill="#38BDF8"/>
+                                    <circle cx="12" cy="34" r="4.5" fill="#38BDF8"/>
+                                    <circle cx="24" cy="8" r="4" fill="#818CF8"/>
+                                    <circle cx="24" cy="24" r="6" fill="url(#ml-grad)"/>
+                                    <circle cx="24" cy="24" r="2.5" fill="#FFFFFF"/>
+                                    <circle cx="24" cy="40" r="4" fill="#818CF8"/>
+                                    <circle cx="36" cy="14" r="4.5" fill="#F43F5E"/>
+                                    <circle cx="36" cy="34" r="4.5" fill="#F43F5E"/>
+                                </svg>
+                                <p>Machine Learning</p>
+                            </div>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8" y="16" width="6" height="24" rx="2" fill="#130654"/>
+                                    <rect x="16" y="8" width="6" height="18" rx="2" fill="#15C3D6"/>
+                                    <rect x="24" y="20" width="6" height="20" rx="2" fill="#FF8C00"/>
+                                    <rect x="32" y="12" width="6" height="14" rx="2" fill="#15C3D6"/>
+                                    <rect x="24" y="8" width="6" height="8" rx="2" fill="#130654"/>
+                                    <rect x="32" y="30" width="6" height="10" rx="2" fill="#130654"/>
+                                </svg>
+                                <p>Pandas</p>
+                            </div>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 5L40 14.5L24 24L8 14.5L24 5Z" fill="#4DABCF"/>
+                                    <path d="M8 14.5L24 24V43L8 33.5V14.5Z" fill="#013243"/>
+                                    <path d="M24 24L40 14.5V33.5L24 43V24Z" fill="#2980B9"/>
+                                    <path d="M16 9.8L32 19.3M32 9.8L16 19.3" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.8"/>
+                                    <path d="M8 24L24 33.5M16 19.3V38.3" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.8"/>
+                                    <path d="M24 33.5L40 24M32 19.3V38.3" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.8"/>
+                                </svg>
+                                <p>NumPy</p>
+                            </div>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 24C14 17 18 10 24 10C29 10 33 14 34 20C35 24 34 25 34 25L14 24Z" fill="#EE0000"/>
+                                    <path d="M20 12C23 11 27 12 28 14C25 15 22 14 20 12Z" fill="#B30000"/>
+                                    <path d="M6 31C11 26 21 24 31 25C37 25.5 42 27.5 44 31C39 33.5 27 34 16 33.5C10 33 6.5 32 6 31Z" fill="#EE0000"/>
+                                    <path d="M13.5 25C18 24.2 28 24.5 34.2 25.8C33.8 27.2 33 28 31 28C22 27.5 16 27 13.5 25Z" fill="#111111"/>
+                                </svg>
+                                <p>Linux (RHEL)</p>
+                            </div>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="dm-grad" x1="6" y1="14" x2="30" y2="34" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FF6B35"/>
+                                            <stop offset="1" stop-color="#F59E0B"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M10 18H16L28 10V32L16 24H10C8.9 24 8 23.1 8 22V20C8 18.9 8.9 18 10 18Z" fill="url(#dm-grad)"/>
+                                    <path d="M16 24V32C16 33.1 16.9 34 18 34C19.1 34 20 33.1 20 32V24H16Z" fill="#F59E0B"/>
+                                    <path d="M32 16C34.5 18 36 20.9 36 24C36 27.1 34.5 30 32 32" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+                                    <path d="M37 12C41 15.2 43 19.5 43 24C43 28.5 41 32.8 37 36" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.7"/>
+                                    <path d="M22 6L24.5 11L30 11.5L25.8 15.2L27 20.5L22 17.5" fill="#10B981" opacity="0.9"/>
+                                </svg>
                                 <p>Digital Marketing</p>
                             </div>
                         </div>
@@ -152,26 +302,71 @@
                     <div class="skills-category glassmorphism h-100">
                         <h3>Tools</h3>
                         <div class="icon-grid">
-                            <div class="skill-item"><i class='bx bxl-git'></i>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="24" y="2.5" width="29.5" height="29.5" rx="5" transform="rotate(45 24 2.5)" fill="#F05032"/>
+                                    <line x1="16.5" y1="21.5" x2="28" y2="33" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round"/>
+                                    <path d="M22.5 27.5L30 20" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round"/>
+                                    <circle cx="16.5" cy="21.5" r="3.2" fill="#FFFFFF"/>
+                                    <circle cx="28" cy="33" r="3.2" fill="#FFFFFF"/>
+                                    <circle cx="30" cy="20" r="3.2" fill="#FFFFFF"/>
+                                </svg>
                                 <p>Git</p>
                             </div>
-                            <div class="skill-item"><i class='bx bxl-github'></i>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4C12.95 4 4 12.95 4 24C4 32.84 9.73 40.34 17.67 42.99C18.67 43.17 19.03 42.56 19.03 42.03C19.03 41.56 19.01 40.05 19.01 38.38C13.44 39.59 12.27 35.7 12.27 35.7C11.36 33.39 10.05 32.77 10.05 32.77C8.23 31.53 10.19 31.55 10.19 31.55C12.2 31.69 13.26 33.62 13.26 33.62C15.05 36.68 17.95 35.8 19.09 35.29C19.27 33.99 19.79 33.1 20.37 32.6C15.92 32.1 11.24 30.38 11.24 22.71C11.24 20.52 12.02 18.73 13.3 17.33C13.09 16.82 12.4 14.77 13.5 12C13.5 12 15.18 11.46 19.01 14.05C20.61 13.61 22.31 13.39 24 13.38C25.69 13.39 27.39 13.61 28.99 14.05C32.82 11.46 34.5 12 34.5 12C35.6 14.77 34.91 16.82 34.7 17.33C35.98 18.73 36.76 20.52 36.76 22.71C36.76 30.4 32.07 32.09 27.61 32.58C28.32 33.19 28.97 34.4 28.97 36.26C28.97 38.93 28.94 41.09 28.94 42.03C28.94 42.57 29.3 43.19 30.31 42.99C38.26 40.33 44 32.84 44 24C44 12.95 35.05 4 24 4Z" fill="#FFFFFF"/>
+                                </svg>
                                 <p>GitHub</p>
                             </div>
-                            <div class="skill-item"><i class='bx bx-code-block'></i>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M35.2 4.4L26.5 12.5L16.2 4.5L11.5 7L22.8 18L11.5 29L16.2 31.5L26.5 23.5L35.2 31.6C36.8 33.1 39.5 32 39.5 29.8V6.2C39.5 4 36.8 2.9 35.2 4.4Z" fill="#0065A9"/>
+                                    <path d="M39.5 29.8V6.2C39.5 4 36.8 2.9 35.2 4.4L26.5 12.5V23.5L35.2 31.6C36.8 33.1 39.5 32 39.5 29.8Z" fill="#007ACC"/>
+                                    <path d="M5.5 14.5V27.5C5.5 28.5 6.2 29.4 7.2 29.7L14.5 32.5L22.8 18L14.5 3.5L7.2 6.3C6.2 6.6 5.5 7.5 5.5 8.5V14.5Z" fill="#1F9CF0"/>
+                                    <path d="M35.2 4.4L14.5 20.8L22.8 18L35.2 4.4Z" fill="#40B3FF"/>
+                                    <path d="M35.2 31.6L14.5 15.2L22.8 18L35.2 31.6Z" fill="#005A9E"/>
+                                </svg>
                                 <p>VS Code</p>
                             </div>
                             <div class="skill-item canva-skill-item">
-                                <i class='bx bxs-palette'></i>
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="canva-grad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#00C4CC"/>
+                                            <stop offset="0.5" stop-color="#3B82F6"/>
+                                            <stop offset="1" stop-color="#7D2AE8"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="24" cy="24" r="20" fill="url(#canva-grad)"/>
+                                    <path d="M29.5 17.5C28.5 16.5 26.8 15.8 24.8 15.8C20.2 15.8 16.5 19.5 16.5 24.2C16.5 28.9 20.2 32.2 25.2 32.2C28.2 32.2 30.5 31 31.5 29.8C31.8 29.5 31.5 28.8 31 29C29.8 29.5 28.2 29.8 26.2 29.8C22.5 29.8 19.8 27.5 19.8 24.2C19.8 20.9 22.5 18.2 26 18.2C27.8 18.2 29.2 18.8 29.8 19.5C30.2 20 30.8 19.5 30.2 18.8L29.5 17.5Z" fill="#FFFFFF"/>
+                                </svg>
                                 <p>Canva</p>
                                 <button class="artist-view-btn" id="open-artist-modal" title="View Artist Work">
-                                    <i class='bx bx-images'></i> View Art
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1" style="vertical-align: -1px;"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg> View Art
                                 </button>
                             </div>
-                            <div class="skill-item"><i class='bx bxl-java'></i>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="24" cy="24" r="18" fill="#2C2255"/>
+                                    <path d="M24 6C33.9 6 42 14.1 42 24C42 33.9 33.9 42 24 42C26.5 39 28 35.2 28 31C28 22.2 20.8 15 12 15C10.5 15 9 15.3 7.6 15.8C10.5 10 16.8 6 24 6Z" fill="#F39200"/>
+                                    <ellipse cx="24" cy="24" rx="20" ry="6" stroke="#C4A2D4" stroke-width="1.8" stroke-dasharray="3 2" fill="none" transform="rotate(-20 24 24)"/>
+                                    <ellipse cx="24" cy="24" rx="20" ry="6" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.8" fill="none" transform="rotate(15 24 24)"/>
+                                </svg>
                                 <p>Eclipse</p>
                             </div>
-                            <div class="skill-item"><i class='bx bx-spreadsheet'></i>
+                            <div class="skill-item">
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="#107C41" d="M37 6H17a2 2 0 00-2 2v8h18a2 2 0 012 2v22h2a2 2 0 002-2V8a2 2 0 00-2-2z"/>
+                                    <path fill="#185C37" d="M15 16H9a2 2 0 00-2 2v22a2 2 0 002 2h24a2 2 0 002-2v-8H17a2 2 0 01-2-2V16z"/>
+                                    <path fill="#21A366" d="M15 16h18v16H15z"/>
+                                    <path fill="#33C481" d="M9 16h6v16H9z"/>
+                                    <path fill="#107C41" d="M15 32h18v8H15z"/>
+                                    <path fill="#21A366" d="M15 8h18v8H15z"/>
+                                    <path fill="#fff" d="M7 13h18a2 2 0 012 2v18a2 2 0 01-2 2H7a2 2 0 01-2-2V15a2 2 0 012-2z" opacity=".1"/>
+                                    <path fill="#107C41" d="M6 14h18a1 1 0 011 1v18a1 1 0 01-1 1H6a1 1 0 01-1-1V15a1 1 0 011-1z"/>
+                                    <path fill="#fff" d="M12.3 29.5l3.2-5.4-3-5.1h2.5l1.8 3.5c.2.4.3.7.4.9h.1c.1-.3.2-.6.4-.9l1.9-3.5h2.3l-3.1 5.1 3.2 5.4h-2.5l-2.1-4c-.1-.2-.2-.5-.3-.7h-.1c-.1.2-.2.5-.3.7l-2.1 4h-2.5z"/>
+                                </svg>
                                 <p>MS Excel</p>
                             </div>
                         </div>
@@ -189,18 +384,28 @@
             <div class="row justify-content-center g-5">
                 <div class="col-lg-10">
                     <div class="experience-card glassmorphism mb-5">
+                        <div class="exp-badge-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        </div>
                         <h3>Internship Trainee</h3>
                         <h4>Voxlom Innovative Solution (OPC) Private Limited, Panagudi</h4>
-                        <span class="duration"><i class='bx bx-calendar'></i> February 2026 (16 Days)</span>
+                        <span class="duration">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1" style="vertical-align: -2px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> February 2026 (16 Days)
+                        </span>
                         <p>
                             Completed a 16-day internship at Voxlom Innovative Solution. During the internship, I showed good punctuality, dedication, and commitment to assigned tasks. I actively participated in the work, completed assignments on time, and gained practical experience in a professional environment.
                         </p>
                     </div>
 
                     <div class="experience-card glassmorphism">
+                        <div class="exp-badge-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#818CF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L15 16h3a3 3 0 0 1 3 3v3H3v-3a3 3 0 0 1 3-3h3l2.25-6.07C9.4 9.58 8 7.95 8 6a4 4 0 0 1 4-4z"/><circle cx="12" cy="6" r="1.5" fill="#818CF8"/></svg>
+                        </div>
                         <h3>Machine Learning Intern</h3>
                         <h4>Malaris Software Solutions, Tirunelveli</h4>
-                        <span class="duration"><i class='bx bx-calendar'></i> June 2025 – July 2025</span>
+                        <span class="duration">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1" style="vertical-align: -2px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> June 2025 – July 2025
+                        </span>
                         <p>
                             Worked on machine learning algorithms, data preprocessing, model training, and performance evaluation
                             using Python.<br>
@@ -220,24 +425,24 @@
             <div class="row g-4 justify-content-center">
                 <div class="col-md-6">
                     <div class="project-box glassmorphism h-100">
-                        <i class='bx bx-cart'></i>
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="project-icon-svg"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
                         <h3>Fashion Hub – E-Commerce Website</h3>
                         <p>A web platform for online fashion shopping with product listing and user interface.</p>
                         <a href="https://python-project-1-2t0t.onrender.com" target="_blank" class="project-live-btn">
-                            <i class='bx bx-link-external'></i> Live Demo
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1" style="vertical-align: -2px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live Demo
                         </a>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="project-box glassmorphism h-100">
-                        <i class='bx bx-book'></i>
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="project-icon-svg"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/></svg>
                         <h3>Library Management System</h3>
                         <p>Built using Java and MySQL.</p>
                         <ul class="features">
-                            <li><i class='bx bx-check'></i> Book management</li>
-                            <li><i class='bx bx-check'></i> User records</li>
-                            <li><i class='bx bx-check'></i> Transaction management</li>
+                            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="vertical-align: -3px;"><polyline points="20 6 9 17 4 12"/></svg> Book management</li>
+                            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="vertical-align: -3px;"><polyline points="20 6 9 17 4 12"/></svg> User records</li>
+                            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-2" style="vertical-align: -3px;"><polyline points="20 6 9 17 4 12"/></svg> Transaction management</li>
                         </ul>
                     </div>
                 </div>
@@ -253,7 +458,13 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
                     <div class="cert-box glassmorphism h-100">
-                        <i class='bx bx-bot'></i>
+                        <!-- Official UiPath Logo -->
+                        <svg width="56" height="56" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="cert-logo-svg">
+                            <rect width="48" height="48" rx="12" fill="#FFF1ED"/>
+                            <path d="M13 14H21V27C21 30.5 18.3 33 15 33C13.8 33 13 32.6 13 32.6V28.5C13 28.5 13.5 28.8 14.2 28.8C15.6 28.8 16.5 27.8 16.5 26.5V18.2H13V14Z" fill="#FA4616"/>
+                            <path d="M27 14H35V27C35 30.5 32.3 33 29 33C27.8 33 27 32.6 27 32.6V28.5C27 28.5 27.5 28.8 28.2 28.8C29.6 28.8 30.5 27.8 30.5 26.5V18.2H27V14Z" fill="#FA4616"/>
+                            <circle cx="31" cy="18.2" r="4.2" fill="#FA4616"/>
+                        </svg>
                         <h3>Naan Mudhalvan Robotic Process Automation Foundation Course</h3>
                         <p>Issued by: UiPath<br>S. Sivaprakash – 15 November 2024</p>
                     </div>
@@ -261,7 +472,13 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="cert-box glassmorphism h-100">
-                        <i class='bx bx-certification'></i>
+                        <!-- Official React Logo -->
+                        <svg width="56" height="56" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="cert-logo-svg">
+                            <ellipse cx="24" cy="24" rx="18" ry="7" stroke="#61DAFB" stroke-width="2" fill="none"/>
+                            <ellipse cx="24" cy="24" rx="18" ry="7" stroke="#61DAFB" stroke-width="2" fill="none" transform="rotate(60 24 24)"/>
+                            <ellipse cx="24" cy="24" rx="18" ry="7" stroke="#61DAFB" stroke-width="2" fill="none" transform="rotate(120 24 24)"/>
+                            <circle cx="24" cy="24" r="3.5" fill="#61DAFB"/>
+                        </svg>
                         <h3>DevOps and ReactJS Workshop</h3>
                         <p>6Solve IT Service Pvt Ltd – September 2025</p>
                     </div>
@@ -269,7 +486,13 @@
 
                 <div class="col-lg-4 col-md-12">
                     <div class="cert-box glassmorphism h-100">
-                        <i class='bx bxl-redhat'></i>
+                        <!-- Official Red Hat Fedora Logo -->
+                        <svg width="56" height="56" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="cert-logo-svg">
+                            <path d="M14 24C14 17 18 10 24 10C29 10 33 14 34 20C35 24 34 25 34 25L14 24Z" fill="#EE0000"/>
+                            <path d="M20 12C23 11 27 12 28 14C25 15 22 14 20 12Z" fill="#B30000"/>
+                            <path d="M6 31C11 26 21 24 31 25C37 25.5 42 27.5 44 31C39 33.5 27 34 16 33.5C10 33 6.5 32 6 31Z" fill="#EE0000"/>
+                            <path d="M13.5 25C18 24.2 28 24.5 34.2 25.8C33.8 27.2 33 28 31 28C22 27.5 16 27 13.5 25Z" fill="#111111"/>
+                        </svg>
                         <h3>Red Hat System Administration (RH134)</h3>
                         <p>Hands-on training in Linux system management and configuration.</p>
                     </div>
@@ -288,21 +511,21 @@
                     <div class="contact-info glassmorphism h-100">
                         <h3>Let's Connect</h3>
                         <div class="contact-item">
-                            <i class='bx bx-envelope'></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon-svg"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                             <p><a href="mailto:prakashsiva2004429@gmail.com">prakashsiva2004429@gmail.com</a></p>
                         </div>
                         <div class="contact-item">
-                            <i class='bx bx-phone'></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon-svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             <p>+91 9344709406</p>
                         </div>
 
                         <div class="social-links-contact">
                             <a href="https://github.com/prakash7946" target="_blank" class="social-item">
-                                <i class='bx bxl-github'></i>
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                                 <span>GitHub</span>
                             </a>
                             <a href="https://linkedin.com/in/s-sivaprakash-b9174829b" target="_blank" class="social-item">
-                                <i class='bx bxl-linkedin'></i>
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.63 1.63 0 0 0 0-3.26 1.63 1.63 0 0 0 0 3.26M7.85 18.5V10.13H5.06V18.5h2.79Z"/></svg>
                                 <span>LinkedIn</span>
                             </a>
                         </div>
@@ -369,14 +592,19 @@
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="social-media-footer">
-                        <a href="https://github.com/prakash7946" target="_blank"><i class='bx bxl-github'></i></a>
-                        <a href="https://linkedin.com/in/s-sivaprakash-b9174829b" target="_blank"><i
-                                class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/prakash7946" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/in/s-sivaprakash-b9174829b" target="_blank" class="linkedin-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.63 1.63 0 0 0 0-3.26 1.63 1.63 0 0 0 0 3.26M7.85 18.5V10.13H5.06V18.5h2.79Z"/></svg>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-4 text-center text-md-end">
                     <div class="footer-iconTop">
-                        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+                        <a href="#home">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -391,7 +619,7 @@
                 <div class="eve-eye"></div>
             </div>
         </div>
-        <i class='bx bx-x'></i>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="chatbot-close-icon"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </div>
     
     <div class="chatbot-container eve-theme" id="chatbot-container">
@@ -405,10 +633,10 @@
                 </div>
                 <div class="robot-info">
                     <h2>SP</h2>
-                    <span class="status"><i class='bx bxs-circle'></i> Online</span>
+                    <span class="status"><svg width="8" height="8" viewBox="0 0 8 8" fill="#10B981" class="me-1" style="vertical-align: 1px;"><circle cx="4" cy="4" r="4"/></svg> Online</span>
                 </div>
             </div>
-            <i class='bx bx-x' id="close-chatbot"></i>
+            <span id="close-chatbot" style="cursor: pointer; display: flex; align-items: center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
         </header>
         <ul class="chatbox eve-chatbox" id="chatbox">
             <li class="chat incoming">
@@ -423,7 +651,7 @@
         </ul>
         <div class="chat-input eve-input-area">
             <textarea id="chat-textarea" placeholder="Message SP..." required></textarea>
-            <button class="send-btn-eve" id="send-btn"><i class='bx bx-send'></i></button>
+            <button class="send-btn-eve" id="send-btn" aria-label="Send"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
         </div>
     </div>
 
@@ -431,7 +659,7 @@
     <div class="puzzle-container glassmorphism" id="puzzle-container">
         <header>
             <h2>Mini Game</h2>
-            <i class='bx bx-x' id="close-puzzle"></i>
+            <span id="close-puzzle" style="cursor: pointer; display: flex; align-items: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
         </header>
         <div class="puzzle-content" id="puzzle-content">
             <!-- Game gets injected here -->
@@ -443,22 +671,22 @@
         <div class="resume-modal">
             <div class="resume-modal-header">
                 <div class="resume-modal-title">
-                    <i class='bx bx-file'></i>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                     <span>Sivaprakash S – Resume</span>
                 </div>
                 <div class="resume-modal-actions">
                     <a href="assets/resume.pdf" class="resume-action-btn download-btn" download title="Download Resume">
-                        <i class='bx bx-download'></i> Download
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download
                     </a>
                     <button class="resume-close-btn" id="resume-close-btn" title="Close">
-                        <i class='bx bx-x'></i>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                     </button>
                 </div>
             </div>
             <div class="resume-modal-body">
                 <iframe src="assets/resume.pdf" id="resume-iframe" title="Resume Preview"></iframe>
                 <div class="resume-fallback" id="resume-fallback">
-                    <i class='bx bx-file-blank'></i>
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                     <p>Unable to preview the resume in your browser.</p>
                     <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
                 </div>
@@ -471,68 +699,86 @@
         <div class="artist-modal">
             <div class="artist-modal-header">
                 <div class="artist-modal-title">
-                    <i class='bx bxs-palette'></i>
-                    <span>🎨 My Canva Artist Work</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+                    <span>My Canva Artist Work</span>
                 </div>
                 <button class="artist-close-btn" id="artist-close-btn" title="Close">
-                    <i class='bx bx-x'></i>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                 </button>
             </div>
             <div class="artist-modal-body">
                 <div class="artist-gallery">
                     <!-- Happy Pongal -->
                     <div class="artist-card">
-                        <div class="artist-card-label"><i class='bx bx-image'></i> Happy Pongal Design</div>
+                        <div class="artist-card-label">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                            Happy Pongal Design
+                        </div>
                         <div class="artist-media-wrap">
                             <img src="HAPPY PONGAL for sp.png" alt="Happy Pongal Design" class="artist-img artist-zoomable" />
                             <div class="artist-overlay" title="Click to zoom">
-                                <i class='bx bx-zoom-in'></i>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                             </div>
                         </div>
                     </div>
                     <!-- Tom Poster -->
                     <div class="artist-card">
-                        <div class="artist-card-label"><i class='bx bx-image'></i> Tom Poster</div>
+                        <div class="artist-card-label">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                            Tom Poster
+                        </div>
                         <div class="artist-media-wrap">
                             <img src="tom poster.png" alt="Tom Poster Design" class="artist-img artist-zoomable" />
                             <div class="artist-overlay" title="Click to zoom">
-                                <i class='bx bx-zoom-in'></i>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                             </div>
                         </div>
                     </div>
                     <!-- Biometric Digital Center -->
                     <div class="artist-card">
-                        <div class="artist-card-label"><i class='bx bx-fingerprint'></i> Biometric Digital Center</div>
+                        <div class="artist-card-label">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2"><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/><path d="M14 13.12c0 2.38 0 6.38-1 8.88"/><path d="M2 16h.01"/><path d="M21.8 16c.2-2 .131-5.354 0-6"/><path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"/><path d="M8.65 22c.21-.66.45-1.32.57-2"/><path d="M9 6.8a6 6 0 0 1 9 5.2v2"/><path d="M17 19a4.8 4.8 0 0 0 .5-1.5"/></svg>
+                            Biometric Digital Center
+                        </div>
                         <div class="artist-media-wrap">
                             <img src="BIOMETRIC DIGITAL CENTER.png" alt="Biometric Digital Center" class="artist-img artist-zoomable" />
                             <div class="artist-overlay" title="Click to zoom">
-                                <i class='bx bx-zoom-in'></i>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                             </div>
                         </div>
                     </div>
                     <!-- Cloud Kitchen SP -->
                     <div class="artist-card">
-                        <div class="artist-card-label"><i class='bx bxs-cloud'></i> Cloud Kitchen SP</div>
+                        <div class="artist-card-label">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EC4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                            Cloud Kitchen SP
+                        </div>
                         <div class="artist-media-wrap">
                             <img src="cloud kitchen sp.png" alt="Cloud Kitchen SP" class="artist-img artist-zoomable" />
                             <div class="artist-overlay" title="Click to zoom">
-                                <i class='bx bx-zoom-in'></i>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                             </div>
                         </div>
                     </div>
                     <!-- Poster SP 1 -->
                     <div class="artist-card">
-                        <div class="artist-card-label"><i class='bx bx-image'></i> SP Poster</div>
+                        <div class="artist-card-label">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                            SP Poster
+                        </div>
                         <div class="artist-media-wrap">
                             <img src="poster sp 1.png" alt="SP Poster" class="artist-img artist-zoomable" />
                             <div class="artist-overlay" title="Click to zoom">
-                                <i class='bx bx-zoom-in'></i>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                             </div>
                         </div>
                     </div>
                     <!-- Pongal Anime Video -->
                     <div class="artist-card">
-                        <div class="artist-card-label"><i class='bx bx-video'></i> Pongal Anime Motion</div>
+                        <div class="artist-card-label">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2"><polygon points="23 7 16 12 23 17 23 7"/><rect width="14" height="12" x="2" y="6" rx="2"/></svg>
+                            Pongal Anime Motion
+                        </div>
                         <div class="artist-media-wrap">
                             <video src="pongal ANIME SP SIVA.mp4" controls class="artist-video" preload="metadata"
                                 poster="HAPPY PONGAL for sp.png">
@@ -548,10 +794,10 @@
     <!-- Image Zoom Lightbox -->
     <div class="img-zoom-overlay" id="img-zoom-overlay">
         <div class="img-zoom-box">
-            <button class="img-zoom-close" id="img-zoom-close"><i class='bx bx-x'></i></button>
+            <button class="img-zoom-close" id="img-zoom-close" aria-label="Close Preview"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
             <img src="" alt="Zoomed Image" class="img-zoom-full" id="img-zoom-full" />
         </div>
-        </div>
+    </div>
     </div>
 
     <!-- Bootstrap 5 JS Bundle -->
